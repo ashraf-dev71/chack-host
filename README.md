@@ -1,131 +1,95 @@
-# CheckHost – Web‑Based Host, Domain & IP Intelligence  
+# CheckHost
 
-**CheckHost** is a high-performance, lightweight, client‑side web application that instantly gathers intelligence for domain names, hostnames, IPv4, and IPv6 addresses. Built for network engineers, developers, sysadmins, security researchers, and students who need fast, accurate network diagnostics without maintaining a backend server.
+### A fast, visual toolkit for understanding hosts, domains, and networks.
 
----
+[![Live site](https://img.shields.io/badge/Live%20site-chack--host.bdhyperashraf71.me-0f766e?style=flat-square)](https://chack-host.bdhyperashraf71.me/)
+[![Built with React](https://img.shields.io/badge/React-19-149eca?style=flat-square&logo=react&logoColor=white)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.8-3178c6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-111827?style=flat-square)](LICENSE)
 
-## 🚀 Live Demo
+CheckHost is a client-side network intelligence dashboard for developers, sysadmins, network engineers, and curious builders. Enter a hostname, domain, IPv4 address, or IPv6 address and get a clear view of its DNS, location, routing, security signals, and edge details.
 
-**▶️ Visit:** [https://chack-host.bdhyperashraf71.me/](https://chack-host.bdhyperashraf71.me/)
+<p align="center">
+  <a href="https://chack-host.bdhyperashraf71.me/"><strong>Open the live dashboard →</strong></a>
+</p>
 
----
+## What you can inspect
 
-## ✨ Features
+| Area | What CheckHost reveals |
+| --- | --- |
+| **IP intelligence** | Location, timezone, ISP, ASN, organization, CIDR, reverse DNS, and routing details |
+| **DNS records** | A, AAAA, CNAME, MX, NS, and TXT records resolved through public DNS-over-HTTPS providers |
+| **Connectivity** | Client-side latency measurements and HTTP/HTTPS reachability checks |
+| **Security signals** | Proxy, VPN, Tor, hosting, and datacenter indicators where data is available |
+| **Cloudflare edge** | Colo, protocol, TLS, WARP, and edge response diagnostics |
+| **Device context** | Browser, operating system, local IP, and connection information |
+| **Geography** | Interactive Leaflet map with standard, Voyager, and satellite tile layers |
+| **Exports** | Copy individual values, download DNS zone-style output, or inspect the raw JSON response |
 
-| Feature | Description |
-|---|---|
-| **Domain & DNS Inspector** | Resolves full DNS records: **A (IPv4)**, **AAAA (IPv6)**, **MX (Mail servers with priorities)**, **NS (Nameservers)**, **TXT (SPF/verification)**, and **CNAME** via Google DoH. |
-| **1-Click Zone Export** | Copy individual DNS records or export a formatted BIND-style DNS zone file in a single click. |
-| **Live Host Ping & HTTP Probe** | Real-time round-trip latency (ping ms) and HTTP/HTTPS status probe. |
-| **Interactive Geolocation Map** | High-precision Leaflet map with 3 switchable tile layers: **CartoDB Voyager**, **OpenStreetMap Standard**, and **ESRI World Satellite Imagery**. Includes GPS coordinate copy & pin centering. |
-| **Reverse DNS (PTR)** | Automatically resolves PTR hostname records for queried IP addresses. |
-| **Network & ASN Intelligence** | Identifies ISP, Autonomous System Number (ASN), organization, routing domain, and CIDR notation. |
-| **Security Threat Flags** | Detects known Proxy, VPN, Tor exit nodes, and datacenter/cloud hosting ranges. |
-| **Cloudflare Edge Diagnostics** | Reads Cloudflare Edge headers, colo airport code (IATA), TLS cipher, HTTP protocol version, and WARP status. |
-| **Client Diagnostics** | Displays local client IP, browser engine, operating system, and network interface metrics. |
-| **Zero Backend Required** | 100% client-side queries against secure public HTTPS APIs. Privacy-focused; no personal query data is logged. |
+## Why it is useful
 
----
+- **No account and no backend to maintain:** the dashboard runs in the browser and calls public HTTPS APIs directly.
+- **Designed for scanning:** related information is grouped into focused cards instead of buried in a raw response.
+- **Useful in real workflows:** copy values, switch map layers, check a record, and export results without leaving the page.
+- **Privacy-minded by design:** this project does not run a private query database or require an application server.
 
-## 🛠️ Tech Stack
+## Built with
 
-- **Framework:** [React 18](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
-- **Build Tool:** [Vite 6](https://vitejs.dev/)
-- **Styling:** [Tailwind CSS 4](https://tailwindcss.com/)
-- **Mapping:** [Leaflet](https://leafletjs.com/) + OpenStreetMap / CartoDB / Esri Satellite
-- **Icons:** [Lucide React](https://lucide.dev/)
-- **DNS Resolution:** Google Public DNS-over-HTTPS (`dns.google`) & Cloudflare 1.1.1.1 DoH
-- **Deployment:** GitHub Pages / Cloudflare Pages / Static Hosting
+- [React 19](https://react.dev/) and [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/) with [Tailwind CSS](https://tailwindcss.com/)
+- [Leaflet](https://leafletjs.com/) for interactive maps
+- [Lucide](https://lucide.dev/) for interface icons
+- Public DNS-over-HTTPS services from [Google](https://dns.google/) and [Cloudflare](https://developers.cloudflare.com/1.1.1.1/encryption/dns-over-https/)
+- GitHub Actions and GitHub Pages for continuous deployment
 
----
+## Run locally
 
-## 📦 Getting Started
+### Requirements
 
-### Prerequisites
-
-- **Node.js**: v20+
-- **npm**: v10+
-
-### Installation & Local Run
+- Node.js 20 or newer
+- npm 10 or newer
 
 ```bash
-# 1. Clone the repository
-git clone https://github.com/bdhyperashraf71/checkhost.git
-cd checkhost
-
-# 2. Install dependencies
+git clone https://github.com/ashraf-dev71/chack-host.git
+cd chack-host
 npm install
-
-# 3. Start development server (runs on 0.0.0.0:3000)
 npm run dev
-
-# 4. Build for production (outputs to dist/)
-npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+The development server runs at [http://localhost:3000](http://localhost:3000).
 
----
+### Production checks
 
-## 📂 Project Structure
+```bash
+npm run lint   # TypeScript check
+npm run build  # Production bundle in dist/
+npm run preview
+```
+
+## Project map
 
 ```text
-checkhost/
-├── .github/
-│   └── workflows/
-│       └── deploy.yml        # Automatic GitHub Pages CI/CD workflow
-├── docs/                     # Static bundle for GitHub Pages (/docs option)
-│   ├── index.html
-│   ├── script.js
-│   ├── style.css
-│   └── CNAME
-├── public/
-│   └── CNAME                 # Custom domain configuration for GitHub Pages
-├── src/
-│   ├── components/
-│   │   ├── CloudflareEdgeCard.tsx     # Cloudflare edge trace & colo diagnostics
-│   │   ├── DeviceDiagnosticsCard.tsx  # Browser & OS device detection
-│   │   ├── DomainDNSCard.tsx          # Comprehensive DNS explorer (A, AAAA, MX, NS, TXT, CNAME)
-│   │   ├── GeolocationDetails.tsx     # City, region, postal, timezone details
-│   │   ├── InteractiveMap.tsx         # Leaflet map with multi-layer controls
-│   │   ├── MainIPCard.tsx             # Primary hero IP/Domain inspection card
-│   │   ├── Navbar.tsx                 # Top branding & latency meter
-│   │   ├── NetworkDetails.tsx         # ASN, ISP, Security & Proxy detection
-│   │   ├── RawJsonModal.tsx           # Exportable JSON data modal
-│   │   └── SearchHeader.tsx           # Search input with history & presets
-│   ├── services/
-│   │   └── ipService.ts      # DoH, reverse DNS, geolocation & latency tests
-│   ├── types.ts              # TypeScript data models and interfaces
-│   ├── App.tsx               # Main application container
-│   ├── main.tsx              # React DOM entry point
-│   └── index.css             # Tailwind CSS & Leaflet custom styling
-├── index.html                # HTML entry point
-├── package.json              # Dependencies and build scripts
-├── tsconfig.json             # TypeScript configuration
-├── vite.config.ts            # Vite bundler configuration
-└── LICENSE                   # MIT License
+src/
+├── components/       Dashboard cards, search, map, navigation, and modals
+├── services/         IP, DNS, geolocation, edge, and latency integrations
+├── App.tsx           Main dashboard composition
+├── index.css         Application and Leaflet styles
+└── types.ts          Shared data models
+
+.github/workflows/
+└── deploy.yml        GitHub Pages build and deployment workflow
 ```
 
----
+## Deployment
 
-## 🌐 Deploying to GitHub Pages
+Pushes to `main` automatically run the workflow in [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml). The workflow installs dependencies, runs the Vite production build, uploads `dist/`, and deploys it to GitHub Pages.
 
-This repository is pre-configured for GitHub Pages:
+The production site uses the custom domain [chack-host.bdhyperashraf71.me](https://chack-host.bdhyperashraf71.me/), configured through [`public/CNAME`](public/CNAME).
 
-1. **Option A: GitHub Actions (Recommended)**  
-   - Go to your repository **Settings** → **Pages** → **Build and deployment**.
-   - Select **GitHub Actions** as the Source.
-   - Every push to `main` will automatically build and deploy the app.
+## Data and privacy
 
-2. **Option B: Deploy from `/docs` folder**  
-   - Go to **Settings** → **Pages** → **Source** → select `Deploy from a branch`.
-   - Choose `main` branch and select `/docs` folder.
-   - Save.
+CheckHost is a diagnostic interface, not a guarantee of ownership, safety, or availability. Results depend on the public services and third-party APIs used at request time. Do not use the tool to submit secrets, private hostnames, credentials, or sensitive internal network information.
 
-The `CNAME` file is included in both `public/` and `docs/` for `chack-host.bdhyperashraf71.me`.
+## License
 
----
-
-## 📜 License
-
-This project is licensed under the [MIT License](LICENSE) – feel free to use, modify, and distribute.
+Released under the [MIT License](LICENSE).
