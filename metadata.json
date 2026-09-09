@@ -1,0 +1,6 @@
+{
+  "name": "IP Checker & Geolocation",
+  "description": "Live IP address lookup, accurate geolocation, network diagnostics, Cloudflare edge trace, and interactive map.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
