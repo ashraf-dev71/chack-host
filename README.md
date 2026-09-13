@@ -2,7 +2,7 @@
 
 ### A fast, visual toolkit for understanding hosts, domains, and networks.
 
-[![Live site](https://img.shields.io/badge/Live%20site-ipchacker.bdhyperashraf71.me-0f766e?style=flat-square)](https://ipchacker.bdhyperashraf71.me/)
+[![Live site](https://img.shields.io/badge/Live%20site-ipchacker.bdhyperashraf71.me-0f766e?style=flat-square)](https://ip-checker.bdhyperashraf71.me)
 [![Built with React](https://img.shields.io/badge/React-19-149eca?style=flat-square&logo=react&logoColor=white)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.8-3178c6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-111827?style=flat-square)](LICENSE)
