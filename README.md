@@ -10,7 +10,8 @@
 CheckHost is a client-side network intelligence dashboard for developers, sysadmins, network engineers, and curious builders. Enter a hostname, domain, IPv4 address, or IPv6 address and get a clear view of its DNS, location, routing, security signals, and edge details.
 
 <p align="center">
-  <a href="https://chack-host.bdhyperashraf71.me/"><strong>Open the live dashboard →</strong></a>
+  <a href="https://ipchacker
+.bdhyperashraf71.me"><strong>Open the live dashboard →</strong></a>
 </p>
 
 ## What you can inspect
