@@ -2,15 +2,15 @@
 
 ### A fast, visual toolkit for understanding hosts, domains, and networks.
 
-[![Live site](https://img.shields.io/badge/Live%20site-ipchacker.bdhyperashraf71.me-0f766e?style=flat-square)](https://ip-checker.bdhyperashraf71.me)
+[![Live site](https://img.shields.io/badge/Live%20site-ip--checker.bdhyperashraf71.me-0f766e?style=flat-square)](https://ip-checker.bdhyperashraf71.me)
 [![Built with React](https://img.shields.io/badge/React-19-149eca?style=flat-square&logo=react&logoColor=white)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.8-3178c6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-111827?style=flat-square)](LICENSE)
 
-CheckHost is a client-side network intelligence dashboard for developers, sysadmins, network engineers, and curious builders. Enter a hostname, domain, IPv4 address, or IPv6 address and get a clear visualization of IP intelligence, DNS records, connectivity status, security signals, Cloudflare edge diagnostics, geolocation, and more.
+CheckHost is a client-side network intelligence dashboard for developers, sysadmins, network engineers, and curious builders. Enter a hostname, domain, IPv4 address, or IPv6 address and get a clear view of what's happening behind the scenes.
 
 <p align="center">
-  <a href="https://ipchacker.bdhyperashraf71.me/"><strong>Open the live dashboard →</strong></a>
+  <a href="https://ip-checker.bdhyperashraf71.me/"><strong>Open the live dashboard →</strong></a>
 </p>
 
 ## What you can inspect
@@ -84,11 +84,11 @@ src/
 
 Pushes to `main` automatically run the workflow in [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml). The workflow installs dependencies, runs the Vite production build, uploads `dist/`, and deploys to GitHub Pages.
 
-The production site uses the custom domain [ipchacker.bdhyperashraf71.me](https://ipchacker.bdhyperashraf71.me/), configured through [`public/CNAME`](public/CNAME).
+The production site uses the custom domain [ip-checker.bdhyperashraf71.me](https://ip-checker.bdhyperashraf71.me/), configured through [`public/CNAME`](public/CNAME).
 
 ## Data and privacy
 
-CheckHost is a diagnostic interface, not a guarantee of ownership, safety, or availability. Results depend on the public services and third-party APIs used at request time. Do not use the tool to submit excessive queries to any upstream service.
+CheckHost is a diagnostic interface, not a guarantee of ownership, safety, or availability. Results depend on the public services and third-party APIs used at request time. Do not use the tool to submit abuse reports to third parties without verification.
 
 ## License
 
