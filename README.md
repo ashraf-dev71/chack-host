@@ -23,7 +23,7 @@ CheckHost is a client-side network intelligence dashboard for developers, sysadm
 | **Security signals** | Proxy, VPN, Tor, hosting, and datacenter indicators where data is available |
 | **Cloudflare edge** | Colo, protocol, TLS, WARP, and edge response diagnostics |
 | **Device context** | Browser, operating system, local IP, and connection information |
-| **Geography** | Interactive Leaflet map with standard, Voyager, and satellite tile layers |
+| **Geography** | Interactive Leaflet map with OpenStreetMap, Humanitarian OSM, OpenTopoMap, Esri street, and satellite layers, plus a Google Maps view and fullscreen controls |
 | **Exports** | Copy individual values, download DNS zone-style output, or inspect the raw JSON response |
 
 ## Why it is useful
@@ -37,7 +37,7 @@ CheckHost is a client-side network intelligence dashboard for developers, sysadm
 
 - [React 19](https://react.dev/) and [TypeScript](https://www.typescriptlang.org/)
 - [Vite](https://vitejs.dev/) with [Tailwind CSS](https://tailwindcss.com/)
-- [Leaflet](https://leafletjs.com/) for interactive maps
+- [Leaflet](https://leafletjs.com/) for interactive maps, with OpenStreetMap, OpenTopoMap, Esri, and Google Maps views
 - [Lucide](https://lucide.dev/) for interface icons
 - Public DNS-over-HTTPS services from [Google](https://dns.google/) and [Cloudflare](https://developers.cloudflare.com/1.1.1.1/encryption/dns-over-https/)
 - GitHub Actions and GitHub Pages for continuous deployment
